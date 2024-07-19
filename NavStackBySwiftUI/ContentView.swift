@@ -22,8 +22,11 @@ struct ContentView: View {
         .init(name: "Madden 2023", rating: "88"),
     ]
     
+//    @State private var path: [Game] = [] /etak path budet tolko odnogo tipa
+    @State private var path = NavigationPath() // a tak on imeet parh , i soderyat mojet mnogo raznix
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List {
                 Section("Platform") {
                     ForEach(platforms, id: \.name) { platform in
@@ -39,6 +42,11 @@ struct ContentView: View {
                             Text(game.name)
                         }
                     }
+//                    Button("Add Games") {
+//                        path.append(games.first!)
+//                        path = games
+//                    
+//                    }
                 }
             }
             .navigationTitle("Gaming")
