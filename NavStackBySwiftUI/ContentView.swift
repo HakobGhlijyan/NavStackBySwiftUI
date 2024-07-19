@@ -20,6 +20,7 @@ struct ContentView: View {
         .init(name: "God of War", rating: "98"),
         .init(name: "Fortnite", rating: "92"),
         .init(name: "Madden 2023", rating: "88"),
+        .init(name: "FIFA 2023", rating: "97"),
     ]
     
     @State private var path = NavigationPath()
